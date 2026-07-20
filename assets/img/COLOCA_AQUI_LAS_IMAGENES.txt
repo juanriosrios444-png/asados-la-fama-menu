@@ -1,0 +1,8 @@
+Reemplaza o agrega en esta carpeta:
+
+- logo-oficial.png (logo oficial completo)
+- favicon.png (icono cuadrado)
+- imagen-compartir.jpg (1200 x 630 px recomendado)
+- fotos oficiales de los platos, por ejemplo churrasco.jpg
+
+Las fotografías también pueden usarse mediante URL HTTPS pública en Google Sheets.

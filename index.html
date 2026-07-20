@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="description" content="Menú digital de Asados La Fama en Itagüí. Asados, picadas, bebidas y promociones.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Asados La Fama | Menú digital">
+  <meta property="og:description" content="Sabor y calidad. Consulta platos, promociones y disponibilidad.">
+  <meta property="og:image" content="assets/img/logo-oficial.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Asados La Fama | Menú digital</title>
+  <link rel="icon" href="assets/img/logo-oficial.png">
+  <link rel="preconnect" href="https://docs.google.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Ir al menú</a>
+
+  <header class="hero" id="inicio">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="brand">
+        <img id="logo" class="brand__logo" src="assets/img/logo-oficial.png" alt="Logo de Asados La Fama">
+        <div id="brandFallback" class="brand__fallback" hidden aria-label="Asados La Fama">
+          <span>ASADOS</span><strong>LA FAMA</strong>
+        </div>
+      </div>
+      <p class="hero__eyebrow">Parrilla · sabor · tradición</p>
+      <h1 id="restaurantName">Asados La Fama</h1>
+      <p class="hero__slogan" id="slogan">Sabor y calidad</p>
+      <p class="hero__message" id="dailyMessage" hidden></p>
+      <div id="openStatus" class="status-pill" hidden role="status"></div>
+      <a id="heroWhatsapp" class="button button--light" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="menu">
+    <section class="toolbar container" aria-label="Buscar y filtrar el menú">
+      <label class="search">
+        <span class="sr-only">Buscar un producto</span>
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="¿Qué se te antoja?" autocomplete="off">
+      </label>
+      <div id="categoryFilters" class="categories" role="group" aria-label="Categorías"></div>
+    </section>
+
+    <section id="loadingState" class="container state" aria-live="polite">
+      <div class="skeleton-grid" aria-hidden="true">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+      <p>Cargando sabores...</p>
+    </section>
+
+    <div id="sourceNotice" class="container source-notice" hidden role="status"></div>
+
+    <section id="weeklySection" class="container weekly" hidden aria-labelledby="weeklyTitle">
+      <div class="weekly__icon" aria-hidden="true">🍽️</div>
+      <div class="weekly__content">
+        <p class="weekly__eyebrow">Solo por esta semana</p>
+        <h2 id="weeklyTitle">Plato especial de la semana</h2>
+        <p id="weeklyDescription">Cada semana preparamos una opción diferente con el sabor de la casa.</p>
+        <span id="weeklyBadge" class="weekly__badge">Especial</span>
+      </div>
+      <div class="weekly__action">
+        <strong id="weeklyPrice">$24.000</strong>
+        <a id="weeklyWhatsapp" class="button button--weekly" href="#" target="_blank" rel="noopener">Preguntar por el plato</a>
+      </div>
+    </section>
+
+    <section id="featuredSection" class="container section" hidden>
+      <div class="section__heading">
+        <div><p class="kicker">Imperdibles</p><h2>Los favoritos de la casa</h2></div>
+        <span aria-hidden="true">🔥</span>
+      </div>
+      <div id="featuredGrid" class="product-grid product-grid--featured"></div>
+    </section>
+
+    <section class="container section" aria-labelledby="menuTitle">
+      <div class="section__heading">
+        <div><p class="kicker">A la parrilla</p><h2 id="menuTitle">Nuestro menú</h2></div>
+      </div>
+      <div id="emptyState" class="empty" hidden>
+        <span aria-hidden="true">🍽️</span>
+        <h3>No encontramos ese antojo</h3>
+        <p>Prueba otra palabra o selecciona “Todos”.</p>
+      </div>
+      <div id="menuSections"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><h2 id="footerName">Asados La Fama</h2><p id="footerSlogan">Sabor y calidad</p></div>
+      <div><h3>Visítanos</h3><p id="address">Centro Comercial La Gran Manzana<br>Segundo piso, local 227<br>Itagüí, Antioquia</p></div>
+      <div><h3>Información</h3><p id="schedule">Consulta nuestro horario por WhatsApp</p><p id="deliveryText">Domicilios disponibles</p><a id="instagramLink" href="#" target="_blank" rel="noopener" hidden>Instagram</a></div>
+      <div><h3>Pedidos</h3><a id="footerWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp: 305 386 4006</a></div>
+    </div>
+    <p class="footer__note">Precios sujetos a cambios · Imágenes de referencia</p>
+  </footer>
+
+  <a id="floatingWhatsapp" class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><span aria-hidden="true">☎</span></a>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Volver al inicio">↑</button>
+  <noscript><div class="noscript">Activa JavaScript para consultar el menú.</div></noscript>
+</body>
+</html>

@@ -49,7 +49,7 @@ main::after{z-index:-1;right:-190px;top:28%;width:430px;height:430px;border:0;ba
 /* Fondo fotográfico aportado por Asados La Fama. */
 html{background:#170806}
 body{position:relative;isolation:isolate;min-height:100vh;background:transparent}
-body::before{content:"";position:fixed;z-index:-2;inset:0;background:linear-gradient(180deg,#14060466 0%,#14060478 52%,#14060488 100%),url("assets/img/fondo-fuego-madera.webp") center/cover no-repeat;pointer-events:none}
+body::before{content:"";position:fixed;z-index:-2;inset:0;background:linear-gradient(180deg,#10040338 0%,#10040348 52%,#1004035c 100%),url("assets/img/fondo-parrilla-carne.webp") center 42%/cover no-repeat;pointer-events:none}
 body::after{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradient(circle at 16% 18%,#ff7a1724 0%,transparent 30%),radial-gradient(circle at 86% 62%,#ffb12b1f 0%,transparent 33%);pointer-events:none}
 main{background:linear-gradient(180deg,#210a0638 0%,#32140c4d 48%,#1d09065c 100%)}
 main::before{background:repeating-linear-gradient(2deg,transparent 0 54px,#11040230 55px 57px,transparent 58px 104px);opacity:.65}

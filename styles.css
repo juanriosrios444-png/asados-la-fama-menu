@@ -13,3 +13,33 @@ main::after{content:"";position:absolute;z-index:-1;right:-120px;top:36%;width:3
 @media (min-width:680px){.toolbar{padding:16px}.weekly{grid-template-columns:auto 1fr auto;align-items:center;padding:28px 30px}.weekly__action{display:grid;justify-items:end}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skeleton-grid{grid-template-columns:repeat(2,1fr)}.footer__grid{grid-template-columns:repeat(2,1fr)}.product-card{grid-template-columns:135px 1fr}.product-card__media{min-height:145px}}
 @media (min-width:960px){.hero{min-height:460px}.toolbar{display:grid;grid-template-columns:320px minmax(0,1fr);align-items:center;gap:16px}.categories{padding-top:0}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-grid--featured{grid-template-columns:repeat(3,minmax(0,1fr))}.product-card{display:block}.product-card__media{height:190px}.product-card__body{padding:17px}.skeleton-grid{grid-template-columns:repeat(3,1fr)}.skeleton{height:360px}.footer__grid{grid-template-columns:1.15fr 1.3fr 1fr 1fr}}
 .product-card__media::after{content:attr(data-icon)}
+
+/* Ambiente de asadero: madera tostada, brasas y fuego. */
+body{background:#1b0c08}
+.hero{background:radial-gradient(ellipse at 50% 118%,#ff9d22 0%,#e6500f 18%,transparent 54%),radial-gradient(circle at 12% 92%,#ff6a001f 0 10%,transparent 31%),radial-gradient(circle at 88% 82%,#ffb12b24 0 8%,transparent 30%),repeating-linear-gradient(118deg,transparent 0 34px,#21080628 35px 37px),linear-gradient(145deg,#35100b 0%,#7d1b12 42%,#b82a12 72%,#4a110c 100%)}
+.hero::before{width:420px;height:210px;left:-170px;top:35%;background:radial-gradient(ellipse,#ff8a2729,transparent 68%);transform:rotate(-18deg)}
+.hero::after{width:440px;height:240px;right:-190px;bottom:-90px;background:radial-gradient(ellipse,#ffc04b38,transparent 68%);box-shadow:none;transform:rotate(18deg)}
+.hero__glow{inset:auto 4% -145px;height:245px;background:#ff7a1a75;filter:blur(68px)}
+.brand__logo{padding:9px 14px;background:#fff;border:1px solid #ffd3a8;border-radius:16px;box-shadow:0 12px 30px #26070466,0 0 34px #ff9c342c}
+.hero__message{background:#32100b4f;border-color:#ffc98952;box-shadow:inset 0 1px 0 #ffffff16}
+.button--light{background:linear-gradient(180deg,#fffdf8,#ffe8cf);border:1px solid #fff;box-shadow:0 10px 24px #310a074d}
+main{background:radial-gradient(ellipse at 8% 7%,#ff7a1a35 0 2%,transparent 22%),radial-gradient(ellipse at 94% 27%,#ffb12b30 0 2%,transparent 24%),radial-gradient(ellipse at 12% 61%,#e641162b 0 2%,transparent 23%),radial-gradient(ellipse at 88% 86%,#ff7a1a32 0 2%,transparent 25%),repeating-linear-gradient(2deg,transparent 0 48px,#1a09062e 49px 51px,transparent 52px 88px),linear-gradient(105deg,#24100b 0%,#5b2817 23%,#32150e 48%,#6a2e18 72%,#25100b 100%)}
+main::before{z-index:-1;background:repeating-radial-gradient(ellipse at 12% 45%,transparent 0 34px,#f6bf7a0d 35px 37px,transparent 38px 69px),repeating-linear-gradient(93deg,transparent 0 72px,#14070424 73px 76px,transparent 77px 144px);opacity:1}
+main::after{z-index:-1;right:-190px;top:28%;width:430px;height:430px;border:0;background:radial-gradient(circle,#ff9c382e 0%,#d93b1512 36%,transparent 70%);box-shadow:none;filter:blur(2px)}
+.toolbar{background:linear-gradient(145deg,#fffdf8f7,#f7e5cff5);border-color:#d8a977;box-shadow:0 16px 38px #14070480,0 1px 0 #fff inset;backdrop-filter:blur(8px)}
+.search{background:#fffaf2;border-color:#dfbd98;box-shadow:inset 0 2px 5px #5c28100c}
+.category-button{background:#fffaf2;border-color:#dab58e;box-shadow:0 3px 8px #3b160d12}
+.category-button[aria-pressed="true"]{background:linear-gradient(135deg,#9f1b14,#ed5d18);border-color:#ff9b3c;box-shadow:0 6px 14px #5e150b38}
+.section__heading{color:#fff5e8;text-shadow:0 2px 8px #1205048c}
+.section__heading::after{height:5px;background:linear-gradient(90deg,#ffcf70,#ff6a16 48%,transparent);box-shadow:0 0 16px #ff6a1666}
+.kicker{color:#ffbd6f;text-shadow:0 2px 8px #1a0805}
+.category-title{color:#fff5e8;text-shadow:0 2px 7px #120504b5}
+.category-title::before{background:linear-gradient(#ffd166 0%,#ff6b16 52%,#b91c1c 100%);box-shadow:0 0 0 5px #2c120c,0 0 15px #ff6b1680}
+.weekly{background:radial-gradient(circle at 88% 12%,#ffbd3c52 0%,transparent 27%),linear-gradient(135deg,#5c140f 0%,#a51e14 48%,#ed5a17 125%);border-color:#ffb34f;box-shadow:0 20px 44px #1205049c,0 0 30px #ff6b1621}
+.product-card{background:linear-gradient(145deg,#fffdf8 0%,#f9ead7 100%);border-color:#d7ac7d;box-shadow:0 10px 24px #12050472,0 1px 0 #fff inset;transition:transform .2s ease,box-shadow .2s ease}
+.product-card__media{border-right:1px solid #d99a60}
+.product-grid--featured .product-card{border-color:#f08b38;box-shadow:0 13px 30px #12050482,0 0 0 1px #ffb2572e}
+.source-notice{background:#fff0cf;border-color:#f0a94e}
+.empty{background:#fff7e9;border-color:#e1ad72}
+.footer{background:radial-gradient(circle at 50% -50%,#9b321e55,transparent 52%),repeating-linear-gradient(3deg,transparent 0 42px,#0d04032e 43px 45px),linear-gradient(120deg,#160805,#39170f 48%,#1a0906);border-top:3px solid #d6531f;box-shadow:0 -10px 30px #ff6a1618}
+@media (hover:hover){.product-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px #10040391,0 0 0 1px #ff9a3b3d}}

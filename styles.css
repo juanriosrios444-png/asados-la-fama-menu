@@ -36,6 +36,8 @@ main::after{z-index:-1;right:-190px;top:28%;width:430px;height:430px;border:0;ba
 .category-title{color:#fff5e8;text-shadow:0 2px 7px #120504b5}
 .category-title::before{background:linear-gradient(#ffd166 0%,#ff6b16 52%,#b91c1c 100%);box-shadow:0 0 0 5px #2c120c,0 0 15px #ff6b1680}
 .weekly{background:radial-gradient(circle at 88% 12%,#ffbd3c52 0%,transparent 27%),linear-gradient(135deg,#5c140f 0%,#a51e14 48%,#ed5a17 125%);border-color:#ffb34f;box-shadow:0 20px 44px #1205049c,0 0 30px #ff6b1621}
+.weekly__media{overflow:hidden;width:100%;aspect-ratio:16/10;border:1px solid #fff5;border-radius:18px;background:#3b0d08;box-shadow:0 12px 28px #21060480}.weekly__media img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:680px){.weekly.has-image{grid-template-columns:minmax(180px,280px) 1fr auto}.weekly:not(.has-image){grid-template-columns:1fr auto}}
 .product-card{background:linear-gradient(145deg,#fffdf8 0%,#f9ead7 100%);border-color:#d7ac7d;box-shadow:0 10px 24px #12050472,0 1px 0 #fff inset;transition:transform .2s ease,box-shadow .2s ease}
 .product-card__media{border-right:1px solid #d99a60}
 .product-grid--featured .product-card{border-color:#f08b38;box-shadow:0 13px 30px #12050482,0 0 0 1px #ffb2572e}

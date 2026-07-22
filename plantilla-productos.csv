@@ -1,5 +1,5 @@
 id,categoria,nombre,descripcion,precio,imagen,disponible,etiqueta,destacado,orden,agotado_modo
-especial-semana,Especial de la semana,Plato especial de la semana,Incluye ensalada. Una preparación diferente cada semana con el sabor de la casa. Pregunta cuál tenemos disponible hoy.,24000,,si,Especial semanal,si,1,mostrar
+especial-semana,Especial de la semana,Pollo napolitano,"250 g de pollo con salsa napolitana casera, queso mozzarella y ensalada.",24000,assets/img/pollo-napolitano.webp,si,Especial semanal,si,1,mostrar
 carne-01,Especialidades a la parrilla,Churrasco,"Porción de 280 g. Incluye ensalada. Jugoso y tierno corte de res, perfecto para los amantes de la buena carne.",38000,assets/img/churrasco.webp,si,Más vendido,si,10,mostrar
 carne-02,Especialidades a la parrilla,Punta de anca,"Porción de 280 g. Incluye ensalada. Un clásico irresistible, con ese toque ahumado que nos caracteriza.",38000,assets/img/punta-de-anca.webp,si,Recomendado,si,11,mostrar
 pollo-01,Especialidades a la parrilla,Pollo finas hierbas,"Porción de 280 g. Incluye ensalada. Marinado con una mezcla secreta de hierbas frescas, ¡una delicia!",35000,assets/img/pollo-finas-hierbas.webp,si,,no,12,mostrar

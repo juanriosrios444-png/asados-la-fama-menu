@@ -160,6 +160,20 @@
     const product = visibleProducts().find((p) => normalize(p.id) === "especial-semana");
     const section = $("#weeklySection");
     if (!product) { section.hidden = true; return; }
+    const media = $("#weeklyMedia");
+    const image = $("#weeklyImage");
+    if (product.imagen) {
+      image.src = product.imagen;
+      image.alt = product.nombre;
+      image.onerror = () => { media.hidden = true; section.classList.remove("has-image"); };
+      media.hidden = false;
+      section.classList.add("has-image");
+    } else {
+      image.removeAttribute("src");
+      image.alt = "";
+      media.hidden = true;
+      section.classList.remove("has-image");
+    }
     $("#weeklyTitle").textContent = product.nombre;
     $("#weeklyDescription").textContent = product.descripcion || "Cada semana preparamos una opción diferente con el sabor de la casa.";
     $("#weeklyPrice").textContent = formatPrice(product.precio);

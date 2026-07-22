@@ -1,15 +1,15 @@
 id,categoria,nombre,descripcion,precio,imagen,disponible,etiqueta,destacado,orden,agotado_modo
-especial-semana,Especial de la semana,Plato especial de la semana,Una preparación diferente cada semana con el sabor de la casa. Pregunta cuál tenemos disponible hoy.,24000,,si,Especial semanal,si,1,mostrar
-carne-01,Especialidades a la parrilla,Churrasco,"Jugoso y tierno corte de res, perfecto para los amantes de la buena carne.",38000,,si,Más vendido,si,10,mostrar
-carne-02,Especialidades a la parrilla,Punta de anca,"Un clásico irresistible, con ese toque ahumado que nos caracteriza.",38000,,si,Recomendado,si,11,mostrar
-pollo-01,Especialidades a la parrilla,Pollo finas hierbas,"Marinado con una mezcla secreta de hierbas frescas, ¡una delicia!",35000,,si,,no,12,mostrar
-cerdo-01,Especialidades a la parrilla,Cerdo especial de la casa,"Nuestro cerdo estrella, preparado con una receta única que te encantará.",35000,,si,,no,13,mostrar
+especial-semana,Especial de la semana,Plato especial de la semana,Incluye ensalada. Una preparación diferente cada semana con el sabor de la casa. Pregunta cuál tenemos disponible hoy.,24000,,si,Especial semanal,si,1,mostrar
+carne-01,Especialidades a la parrilla,Churrasco,"Porción de 280 g. Incluye ensalada. Jugoso y tierno corte de res, perfecto para los amantes de la buena carne.",38000,,si,Más vendido,si,10,mostrar
+carne-02,Especialidades a la parrilla,Punta de anca,"Porción de 280 g. Incluye ensalada. Un clásico irresistible, con ese toque ahumado que nos caracteriza.",38000,,si,Recomendado,si,11,mostrar
+pollo-01,Especialidades a la parrilla,Pollo finas hierbas,"Incluye ensalada. Marinado con una mezcla secreta de hierbas frescas, ¡una delicia!",35000,,si,,no,12,mostrar
+cerdo-01,Especialidades a la parrilla,Cerdo especial de la casa,"Incluye ensalada. Nuestro cerdo estrella, preparado con una receta única que te encantará.",35000,,si,,no,13,mostrar
 picada-01,Especialidades a la parrilla,Picada La Fama,"Pollo, punta de anca, chorizo, arepa y queso mozzarella.",45000,,si,Nuevo,si,14,mostrar
 picada-02,Especialidades a la parrilla,Picada para dos,"Arepa, papas, pollo o cerdo y chorizo.",24000,,si,,no,15,mostrar
 chorizo-01,Especialidades a la parrilla,Chorizo,"Papa o arepa, ensalada y chorizo.",19000,,si,,no,16,mostrar
-clasico-01,Clásicos de la parrilla,Solomo de res,"Un corte suave y lleno de sabor, ideal para una comida especial.",25000,,si,,no,20,mostrar
-clasico-02,Clásicos de la parrilla,Pollo tradicional,"El sabor de siempre, hecho a la parrilla con maestría.",19000,,si,,no,21,mostrar
-clasico-03,Clásicos de la parrilla,Cerdo clásico,Para quienes disfrutan de un buen corte de cerdo a la brasa.,19000,,si,,no,22,mostrar
+clasico-01,Clásicos de la parrilla,Solomo de res,"Porción de 250 g. Incluye ensalada. Un corte suave y lleno de sabor, ideal para una comida especial.",25000,,si,,no,20,mostrar
+clasico-02,Clásicos de la parrilla,Pollo tradicional,"Porción de 250 g. Incluye ensalada. El sabor de siempre, hecho a la parrilla con maestría.",19000,,si,,no,21,mostrar
+clasico-03,Clásicos de la parrilla,Cerdo clásico,Porción de 250 g. Incluye ensalada. Para quienes disfrutan de un buen corte de cerdo a la brasa.,19000,,si,,no,22,mostrar
 sin-alcohol-01,Bebidas sin alcohol,Agua,,5000,,si,,no,30,mostrar
 sin-alcohol-02,Bebidas sin alcohol,Agua saborizada,,5000,,si,,no,31,mostrar
 sin-alcohol-03,Bebidas sin alcohol,Cuatro,,5000,,si,,no,32,mostrar

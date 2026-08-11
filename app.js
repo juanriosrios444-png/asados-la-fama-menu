@@ -60,7 +60,7 @@
       try {
         const rows = await fetchCsv(remoteUrl);
         const products = rows.map(normalizeProduct).filter((p) => p.id && p.nombre);
-        if (products.length) return { products: sortProducts(mergeLocalProducts(products, extras)), fallback: false };
+        if (products.length) return { products: sortProducts(groupBeverageCategories(mergeLocalProducts(products, extras))), fallback: false };
         throw new Error("La hoja de productos no contiene filas válidas.");
       } catch (error) { console.warn("No se pudo cargar Google Sheets; se usará el respaldo local.", error); }
     }
@@ -68,7 +68,7 @@
     if (!response.ok) throw new Error("No se pudo cargar el menú local.");
     const data = await response.json();
     const products = (data.productos || data).map(normalizeProduct).filter((p) => p.id && p.nombre);
-    return { products: sortProducts(mergeLocalProducts(products, extras)), fallback: Boolean(remoteUrl) };
+    return { products: sortProducts(groupBeverageCategories(mergeLocalProducts(products, extras))), fallback: Boolean(remoteUrl) };
   }
 
   async function loadLocalExtras() {
@@ -88,6 +88,19 @@
     const merged = new Map(products.map((product) => [product.id, product]));
     extras.forEach((product) => merged.set(product.id, product));
     return Array.from(merged.values());
+  }
+
+  function groupBeverageCategories(products) {
+    const beersAndWines = new Set(["otra-07", "otra-08", "otra-09"]);
+    const sodas = new Set(["otra-05", "otra-06", "otra-10", "otra-11", "otra-12", "otra-13"]);
+    const juicesWatersAndSoftDrinks = new Set(["otra-01", "otra-02", "otra-03", "otra-04", "otra-14", "otra-15"]);
+    return products.map((product) => {
+      const id = normalize(product.id);
+      if (id.startsWith("cerveza-") || beersAndWines.has(id)) return { ...product, categoria: "Cervezas y vinos" };
+      if (sodas.has(id)) return { ...product, categoria: "Sodas" };
+      if (id.startsWith("sin-alcohol-") || juicesWatersAndSoftDrinks.has(id)) return { ...product, categoria: "Jugos, aguas y gaseosas" };
+      return product;
+    });
   }
 
   async function loadSettings() {
@@ -229,8 +242,9 @@
 
   function categoryIcon(category) {
     const value = normalize(category);
-    if (value.includes("cerveza")) return "🍺";
-    if (value.includes("bebida")) return value.includes("sin alcohol") ? "🧃" : "🥤";
+    if (value.includes("cerveza") || value.includes("vino")) return "🍺";
+    if (value.includes("jugo") || value.includes("agua") || value.includes("gaseosa")) return "🧃";
+    if (value.includes("soda")) return "🥤";
     return "🍖";
   }
 

@@ -13,7 +13,7 @@
     estado_restaurante: "abierto",
     mensaje_destacado: ""
   };
-  const CONFIG = Object.assign({ PRODUCTS_CSV_URL: "", SETTINGS_CSV_URL: "", LOCAL_FALLBACK_URL: "menu-ejemplo.json", CACHE_MINUTES: 5 }, window.MENU_CONFIG || {});
+  const CONFIG = Object.assign({ PRODUCTS_CSV_URL: "", SETTINGS_CSV_URL: "", LOCAL_FALLBACK_URL: "menu-ejemplo.json", LOCAL_EXTRAS_URL: "menu-adiciones.json", CACHE_MINUTES: 5 }, window.MENU_CONFIG || {});
   const state = { products: [], settings: { ...DEFAULTS }, category: "Todos", query: "" };
   const $ = (selector) => document.querySelector(selector);
 
@@ -55,18 +55,39 @@
 
   async function loadProducts() {
     const remoteUrl = cleanUrl(CONFIG.PRODUCTS_CSV_URL);
+    const extras = await loadLocalExtras();
     if (remoteUrl) {
       try {
         const rows = await fetchCsv(remoteUrl);
         const products = rows.map(normalizeProduct).filter((p) => p.id && p.nombre);
-        if (products.length) return { products: sortProducts(products), fallback: false };
+        if (products.length) return { products: sortProducts(mergeMissingProducts(products, extras)), fallback: false };
         throw new Error("La hoja de productos no contiene filas válidas.");
       } catch (error) { console.warn("No se pudo cargar Google Sheets; se usará el respaldo local.", error); }
     }
     const response = await fetch(CONFIG.LOCAL_FALLBACK_URL, { cache: "no-store" });
     if (!response.ok) throw new Error("No se pudo cargar el menú local.");
     const data = await response.json();
-    return { products: sortProducts((data.productos || data).map(normalizeProduct).filter((p) => p.id && p.nombre)), fallback: Boolean(remoteUrl) };
+    const products = (data.productos || data).map(normalizeProduct).filter((p) => p.id && p.nombre);
+    return { products: sortProducts(mergeMissingProducts(products, extras)), fallback: Boolean(remoteUrl) };
+  }
+
+  async function loadLocalExtras() {
+    if (!CONFIG.LOCAL_EXTRAS_URL) return [];
+    try {
+      const response = await fetch(CONFIG.LOCAL_EXTRAS_URL, { cache: "no-store" });
+      if (!response.ok) return [];
+      const data = await response.json();
+      return (data.productos || data).map(normalizeProduct).filter((p) => p.id && p.nombre);
+    } catch (error) {
+      console.warn("No se pudieron cargar las adiciones locales del menu.", error);
+      return [];
+    }
+  }
+
+  function mergeMissingProducts(products, extras) {
+    const merged = new Map(products.map((product) => [product.id, product]));
+    extras.forEach((product) => { if (!merged.has(product.id)) merged.set(product.id, product); });
+    return Array.from(merged.values());
   }
 
   async function loadSettings() {

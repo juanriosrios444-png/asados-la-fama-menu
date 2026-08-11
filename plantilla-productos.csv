@@ -20,16 +20,17 @@ sin-alcohol-07,Bebidas sin alcohol,Agua Manantial,,7000,,si,,no,36,mostrar
 sin-alcohol-08,Bebidas sin alcohol,Hatsu,,10000,,si,,no,37,mostrar
 sin-alcohol-09,Bebidas sin alcohol,Té Fuze Tea,,6000,,si,,no,38,mostrar
 cerveza-01,Cervezas,Corona,,7000,,si,,no,40,mostrar
-cerveza-02,Cervezas,Club Colombia latón,,8000,,si,,no,41,mostrar
-cerveza-03,Cervezas,Club Colombia pequeña,,7000,,si,,no,42,mostrar
-cerveza-04,Cervezas,Águila Original,,7000,,si,,no,43,mostrar
-cerveza-05,Cervezas,Águila Light,,7000,,si,,no,44,mostrar
+cerveza-02,Cervezas,Club Colombia latón,,9000,,si,,no,41,mostrar
+cerveza-03,Cervezas,Club Colombia pequeña,,9000,,si,,no,42,mostrar
+cerveza-04,Cervezas,Águila Original,,8000,,si,,no,43,mostrar
+cerveza-05,Cervezas,Águila Light,,8000,,si,,no,44,mostrar
+cerveza-06,Cervezas,Poker,,8000,,si,,no,45,mostrar
+cerveza-07,Cervezas,Pilsen,,8000,,si,,no,46,mostrar
 otra-01,Otras bebidas,Coca-Cola Original,,5000,,si,,no,50,mostrar
 otra-02,Otras bebidas,Coca-Cola Zero,,5000,,si,,no,51,mostrar
 otra-03,Otras bebidas,Limonada de limón,,10000,,si,,no,52,mostrar
 otra-04,Otras bebidas,Limonada de coco,,12000,,si,,no,53,mostrar
 otra-05,Otras bebidas,Soda frutos amarillos,,10000,,si,,no,54,mostrar
-otra-06,Otras bebidas,Soda frutos rojos,,10000,,si,,no,55,mostrar
 otra-07,Otras bebidas,Copa de vino,,10000,,si,,no,56,mostrar
 otra-08,Otras bebidas,Botella de vino,,60000,,si,,no,57,mostrar
 otra-09,Otras bebidas,Sangría frutos rojos,,38000,,si,,no,58,mostrar

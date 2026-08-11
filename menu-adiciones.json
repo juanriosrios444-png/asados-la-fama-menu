@@ -1,5 +1,7 @@
 {
   "productos": [
+    {"id":"sin-alcohol-10","categoria":"Bebidas sin alcohol","nombre":"Powerade azul","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39},
+    {"id":"sin-alcohol-11","categoria":"Bebidas sin alcohol","nombre":"Powerade rojo","descripcion":"","precio":6000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39.5},
     {"id":"cerveza-02","categoria":"Cervezas","nombre":"Club Colombia latón","descripcion":"","precio":9000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":41},
     {"id":"cerveza-03","categoria":"Cervezas","nombre":"Club Colombia pequeña","descripcion":"","precio":9000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":42},
     {"id":"cerveza-04","categoria":"Cervezas","nombre":"Águila Original","descripcion":"","precio":8000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":43},

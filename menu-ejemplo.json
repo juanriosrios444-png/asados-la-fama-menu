@@ -21,6 +21,8 @@
     {"id":"sin-alcohol-07","categoria":"Bebidas sin alcohol","nombre":"Agua Manantial","descripcion":"","precio":7000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":36},
     {"id":"sin-alcohol-08","categoria":"Bebidas sin alcohol","nombre":"Hatsu","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":37},
     {"id":"sin-alcohol-09","categoria":"Bebidas sin alcohol","nombre":"Té Fuze Tea","descripcion":"","precio":6000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":38},
+    {"id":"sin-alcohol-10","categoria":"Bebidas sin alcohol","nombre":"Powerade azul","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39},
+    {"id":"sin-alcohol-11","categoria":"Bebidas sin alcohol","nombre":"Powerade rojo","descripcion":"","precio":6000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39.5},
     {"id":"cerveza-01","categoria":"Cervezas","nombre":"Corona","descripcion":"","precio":7000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":40},
     {"id":"cerveza-02","categoria":"Cervezas","nombre":"Club Colombia latón","descripcion":"","precio":9000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":41},
     {"id":"cerveza-03","categoria":"Cervezas","nombre":"Club Colombia pequeña","descripcion":"","precio":9000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":42},

@@ -13,6 +13,8 @@
     {"id":"otra-10","categoria":"Otras bebidas","nombre":"Soda de tamarindo personal","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":59},
     {"id":"otra-11","categoria":"Otras bebidas","nombre":"Soda de frutos rojos personal","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":60},
     {"id":"otra-12","categoria":"Otras bebidas","nombre":"Jarra de soda de tamarindo","descripcion":"","precio":20000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":61},
-    {"id":"otra-13","categoria":"Otras bebidas","nombre":"Jarra de soda de frutos rojos","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":62}
+    {"id":"otra-13","categoria":"Otras bebidas","nombre":"Jarra de soda de frutos rojos","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":62},
+    {"id":"otra-14","categoria":"Otras bebidas","nombre":"Coca-Cola vidrio 250 ml","descripcion":"","precio":4000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":63},
+    {"id":"otra-15","categoria":"Otras bebidas","nombre":"Coca-Cola Zero 250 ml","descripcion":"","precio":3000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":64}
   ]
 }

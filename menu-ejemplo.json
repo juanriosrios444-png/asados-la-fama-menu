@@ -33,7 +33,7 @@
     {"id":"otra-05","categoria":"Otras bebidas","nombre":"Soda frutos amarillos","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":54},
     {"id":"otra-06","categoria":"Otras bebidas","nombre":"Soda frutos rojos","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":55},
     {"id":"otra-07","categoria":"Otras bebidas","nombre":"Copa de vino","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":56},
-    {"id":"otra-08","categoria":"Otras bebidas","nombre":"Botella de vino","descripcion":"","precio":6000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":57},
+    {"id":"otra-08","categoria":"Otras bebidas","nombre":"Botella de vino","descripcion":"","precio":60000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":57},
     {"id":"otra-09","categoria":"Otras bebidas","nombre":"Sangría frutos rojos","descripcion":"","precio":38000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":58},
     {"id":"otra-10","categoria":"Otras bebidas","nombre":"Soda de tamarindo personal","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":59},
     {"id":"otra-11","categoria":"Otras bebidas","nombre":"Soda de frutos rojos personal","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":60},

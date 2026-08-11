@@ -60,7 +60,7 @@
       try {
         const rows = await fetchCsv(remoteUrl);
         const products = rows.map(normalizeProduct).filter((p) => p.id && p.nombre);
-        if (products.length) return { products: sortProducts(mergeMissingProducts(products, extras)), fallback: false };
+        if (products.length) return { products: sortProducts(mergeLocalProducts(products, extras)), fallback: false };
         throw new Error("La hoja de productos no contiene filas válidas.");
       } catch (error) { console.warn("No se pudo cargar Google Sheets; se usará el respaldo local.", error); }
     }
@@ -68,7 +68,7 @@
     if (!response.ok) throw new Error("No se pudo cargar el menú local.");
     const data = await response.json();
     const products = (data.productos || data).map(normalizeProduct).filter((p) => p.id && p.nombre);
-    return { products: sortProducts(mergeMissingProducts(products, extras)), fallback: Boolean(remoteUrl) };
+    return { products: sortProducts(mergeLocalProducts(products, extras)), fallback: Boolean(remoteUrl) };
   }
 
   async function loadLocalExtras() {
@@ -84,9 +84,9 @@
     }
   }
 
-  function mergeMissingProducts(products, extras) {
+  function mergeLocalProducts(products, extras) {
     const merged = new Map(products.map((product) => [product.id, product]));
-    extras.forEach((product) => { if (!merged.has(product.id)) merged.set(product.id, product); });
+    extras.forEach((product) => merged.set(product.id, product));
     return Array.from(merged.values());
   }
 

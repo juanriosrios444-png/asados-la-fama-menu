@@ -1,6 +1,6 @@
 {
   "productos": [
-    {"id":"especial-semana","categoria":"Especial de la semana","nombre":"Pollo napolitano","descripcion":"250 g de pollo con salsa napolitana casera, queso mozzarella y ensalada. Incluye soda personal de tamarindo o frutos rojos.","precio":24000,"imagen":"assets/img/pollo-napolitano.webp","disponible":"si","etiqueta":"Especial semanal","destacado":"si","orden":1,"agotado_modo":"mostrar"},
+    {"id":"especial-semana","categoria":"Especial de la semana","nombre":"Pollo napolitano","descripcion":"250 g de pollo con salsa napolitana casera, queso mozzarella y ensalada. Incluye soda personal de tamarindo o frutos rojos.","precio":24900,"imagen":"assets/img/pollo-napolitano.webp","disponible":"si","etiqueta":"Especial semanal","destacado":"si","orden":1,"agotado_modo":"mostrar"},
     {"id":"picada-02","categoria":"Especialidades a la parrilla","nombre":"Picada para dos","descripcion":"Arepa, papas, pollo o cerdo y chorizo.","precio":25000,"imagen":"assets/img/picada-para-dos.webp","disponible":"si","etiqueta":"","destacado":"no","orden":15},
     {"id":"sin-alcohol-10","categoria":"Bebidas sin alcohol","nombre":"Powerade azul","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39},
     {"id":"sin-alcohol-11","categoria":"Bebidas sin alcohol","nombre":"Powerade rojo","descripcion":"","precio":6000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39.5},

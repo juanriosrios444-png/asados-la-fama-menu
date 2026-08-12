@@ -14,6 +14,6 @@ En la pestaña `productos`, busca la fila cuyo `id` es `especial-semana`.
 
 - Cambia `nombre` para poner el nombre del plato de esa semana.
 - Cambia `descripcion` si deseas explicar qué incluye.
-- El precio actual es `24000`.
+- El precio actual es `24900`.
 - Usa `disponible = no` para mostrarlo agotado.
 - Usa `agotado_modo = ocultar` si no quieres mostrarlo temporalmente.

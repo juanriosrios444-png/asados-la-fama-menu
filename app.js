@@ -194,6 +194,8 @@
     const product = visibleProducts().find((p) => normalize(p.id) === "especial-semana");
     const section = $("#weeklySection");
     if (!product) { section.hidden = true; return; }
+    const daily = $("#dailyMessage");
+    if (daily && normalize(daily.textContent).includes("plato especial")) daily.textContent = daily.textContent.replace(/\$\s?[\d.]+/, formatPrice(product.precio));
     const media = $("#weeklyMedia");
     const image = $("#weeklyImage");
     if (product.imagen) {

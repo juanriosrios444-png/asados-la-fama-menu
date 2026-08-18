@@ -30,7 +30,7 @@ cerveza-06,Cervezas,Poker,,8000,,si,,no,45,mostrar
 cerveza-07,Cervezas,Pilsen,,8000,,si,,no,46,mostrar
 otra-01,Otras bebidas,Coca-Cola Original,,5000,,si,,no,50,mostrar
 otra-02,Otras bebidas,Coca-Cola Zero,,5000,,si,,no,51,mostrar
-otra-03,Otras bebidas,Limonada de limón,,10000,,si,,no,52,mostrar
+otra-03,Otras bebidas,Limonada tradicional,,10000,,si,,no,52,mostrar
 otra-04,Otras bebidas,Limonada de coco,,12000,,si,,no,53,mostrar
 otra-05,Otras bebidas,Soda frutos amarillos,,10000,,si,,no,54,mostrar
 otra-07,Otras bebidas,Copa de vino,,10000,,si,,no,56,mostrar
@@ -39,6 +39,6 @@ otra-09,Otras bebidas,Sangría frutos rojos,,38000,,si,,no,58,mostrar
 otra-10,Otras bebidas,Soda de tamarindo personal,,10000,,si,,no,59,mostrar
 otra-11,Otras bebidas,Soda de frutos rojos personal,,10000,,si,,no,60,mostrar
 otra-12,Otras bebidas,Jarra de soda de tamarindo,,20000,,si,,no,61,mostrar
-otra-13,Otras bebidas,Jarra de soda de frutos rojos,,10000,,si,,no,62,mostrar
+otra-13,Otras bebidas,Jarra de soda de frutos rojos,,20000,,si,,no,62,mostrar
 otra-14,Otras bebidas,Coca-Cola vidrio 250 ml,,4000,,si,,no,63,mostrar
 otra-15,Otras bebidas,Coca-Cola Zero 250 ml,,3000,,si,,no,64,mostrar

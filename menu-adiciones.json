@@ -1,5 +1,6 @@
 {
   "productos": [
+    {"id":"hamburguesa-la-fama","categoria":"Nuevo","nombre":"Hamburguesa La Fama","descripcion":"Carne de res de 180 g, chorizo La Fama, queso mozzarella, chimichurri y salsa de la casa.","precio":28000,"imagen":"assets/img/hamburguesa-la-fama.jpeg","disponible":"si","etiqueta":"Nuevo","destacado":"no","orden":2,"agotado_modo":"mostrar"},
     {"id":"especial-semana","categoria":"Especial de la semana","nombre":"Pollo en champiñones","descripcion":"Pollo a la parrilla con salsa de champiñones casera y papas en cascos. Incluye soda personal de tamarindo o frutos rojos.","precio":24900,"imagen":"assets/img/pollo-champinones-semana.jpg","disponible":"si","etiqueta":"Especial semanal","destacado":"si","orden":1,"agotado_modo":"mostrar"},
     {"id":"picada-02","categoria":"Especialidades a la parrilla","nombre":"Picada para dos","descripcion":"Arepa, papas, pollo o cerdo y chorizo.","precio":25000,"imagen":"assets/img/picada-para-dos.webp","disponible":"si","etiqueta":"","destacado":"no","orden":15},
     {"id":"sin-alcohol-10","categoria":"Bebidas sin alcohol","nombre":"Powerade azul","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":39},

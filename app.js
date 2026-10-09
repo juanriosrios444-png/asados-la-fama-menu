@@ -231,6 +231,9 @@
     $("#featuredGrid").innerHTML = featured.slice(0, 6).map(productCard).join("");
     const grouped = products.reduce((acc, product) => { (acc[product.categoria] ||= []).push(product); return acc; }, {});
     $("#menuSections").innerHTML = Object.entries(grouped).map(([category, items]) => `<section class="category-section" aria-labelledby="cat-${slugify(category)}"><h3 class="category-title" id="cat-${slugify(category)}">${escapeHtml(category)}</h3><div class="product-grid">${items.map(productCard).join("")}</div></section>`).join("");
+    const newCategory = $("#menuSections #cat-nuevo")?.closest(".category-section");
+    $("#newSection").replaceChildren(...(newCategory ? [newCategory] : []));
+    $("#newSection").hidden = !newCategory;
     $("#emptyState").hidden = products.length > 0;
     attachImageFallbacks();
   }

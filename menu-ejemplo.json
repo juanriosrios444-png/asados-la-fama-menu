@@ -33,7 +33,7 @@
     {"id":"otra-01","categoria":"Otras bebidas","nombre":"Coca-Cola Original","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":50},
     {"id":"otra-02","categoria":"Otras bebidas","nombre":"Coca-Cola Zero","descripcion":"","precio":5000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":51},
     {"id":"otra-03","categoria":"Otras bebidas","nombre":"Limonada tradicional","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":52},
-    {"id":"otra-04","categoria":"Otras bebidas","nombre":"Limonada de coco","descripcion":"","precio":12000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":53},
+    {"id":"otra-04","categoria":"Otras bebidas","nombre":"Limonada de coco","descripcion":"","precio":12000,"imagen":"","disponible":"si","etiqueta":"Nuevo","destacado":"no","orden":53},
     {"id":"otra-05","categoria":"Otras bebidas","nombre":"Soda frutos amarillos","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":54},
     {"id":"otra-07","categoria":"Otras bebidas","nombre":"Copa de vino","descripcion":"","precio":10000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":56},
     {"id":"otra-08","categoria":"Otras bebidas","nombre":"Botella de vino","descripcion":"","precio":60000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":57},

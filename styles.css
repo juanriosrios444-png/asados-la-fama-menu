@@ -54,3 +54,9 @@ body::before{content:"";position:fixed;z-index:-2;inset:0;background:linear-grad
 body::after{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradient(circle at 16% 18%,#ff7a1724 0%,transparent 30%),radial-gradient(circle at 86% 62%,#ffb12b1f 0%,transparent 33%);pointer-events:none}
 main{background:linear-gradient(180deg,#210a0638 0%,#32140c4d 48%,#1d09065c 100%)}
 main::before{background:repeating-linear-gradient(2deg,transparent 0 54px,#11040230 55px 57px,transparent 58px 104px);opacity:.65}
+
+/* Envases completos y novedades en el orden solicitado. */
+.product-card__media--packaged{background:#fff}
+.product-card__media--packaged img{object-fit:contain;padding:8px}
+#newSection .product-grid{grid-template-columns:1fr}
+@media (min-width:960px){#newSection .product-card{display:grid;grid-template-columns:180px 1fr}#newSection .product-card__media{height:190px}}

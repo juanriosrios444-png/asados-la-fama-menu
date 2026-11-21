@@ -14,6 +14,41 @@
     mensaje_destacado: ""
   };
   const CONFIG = Object.assign({ PRODUCTS_CSV_URL: "", SETTINGS_CSV_URL: "", LOCAL_FALLBACK_URL: "menu-ejemplo.json", LOCAL_EXTRAS_URL: "menu-adiciones.json", CACHE_MINUTES: 5 }, window.MENU_CONFIG || {});
+  const PRODUCT_IMAGES = {
+    "sin-alcohol-01": "assets/img/bebidas/marca-sin-alcohol-01.jpg",
+    "sin-alcohol-02": "assets/img/bebidas/marca-sin-alcohol-02.jpg",
+    "sin-alcohol-03": "assets/img/bebidas/marca-sin-alcohol-03.jpg",
+    "sin-alcohol-04": "assets/img/bebidas/marca-sin-alcohol-04.jpg",
+    "sin-alcohol-05": "assets/img/bebidas/marca-sin-alcohol-05.jpg",
+    "sin-alcohol-06": "assets/img/bebidas/marca-sin-alcohol-06.jpg",
+    "sin-alcohol-07": "assets/img/bebidas/marca-sin-alcohol-07.jpg",
+    "sin-alcohol-08": "assets/img/bebidas/marca-sin-alcohol-08.jpg",
+    "sin-alcohol-09": "assets/img/bebidas/marca-sin-alcohol-09.jpg",
+    "sin-alcohol-10": "assets/img/bebidas/marca-sin-alcohol-10.jpg",
+    "sin-alcohol-11": "assets/img/bebidas/marca-sin-alcohol-11.jpg",
+    "cerveza-01": "assets/img/bebidas/marca-cerveza-01.jpg",
+    "cerveza-02": "assets/img/bebidas/marca-cerveza-02.jpg",
+    "cerveza-03": "assets/img/bebidas/marca-cerveza-03.jpg",
+    "cerveza-04": "assets/img/bebidas/marca-cerveza-04.jpg",
+    "cerveza-05": "assets/img/bebidas/marca-cerveza-05.jpg",
+    "cerveza-06": "assets/img/bebidas/marca-cerveza-06.jpg",
+    "cerveza-07": "assets/img/bebidas/marca-cerveza-07.jpg",
+    "otra-01": "assets/img/bebidas/marca-otra-01.jpg",
+    "otra-02": "assets/img/bebidas/marca-otra-02.jpg",
+    "otra-14": "assets/img/bebidas/marca-otra-14.jpg",
+    "otra-15": "assets/img/bebidas/marca-otra-15.jpg",
+    "otra-03": "assets/img/bebidas/ref-otra-03.jpg",
+    "otra-05": "assets/img/bebidas/ref-otra-05.jpg",
+    "otra-07": "assets/img/bebidas/ref-otra-07.jpg",
+    "otra-08": "assets/img/bebidas/ref-otra-08.jpg",
+    "otra-09": "assets/img/bebidas/ref-otra-09.jpg",
+    "otra-10": "assets/img/bebidas/ref-otra-10.jpg",
+    "otra-11": "assets/img/bebidas/ref-otra-11.jpg",
+    "otra-12": "assets/img/bebidas/ref-otra-12.jpg",
+    "otra-13": "assets/img/bebidas/ref-otra-13.jpg",
+    "otra-04": "assets/img/bebidas/ref-otra-04.jpg",
+    "otra-06": "assets/img/bebidas/ref-otra-11.jpg"
+  };
   const state = { products: [], settings: { ...DEFAULTS }, category: "Todos", query: "" };
   const $ = (selector) => document.querySelector(selector);
 
@@ -96,6 +131,7 @@
     const juicesWatersAndSoftDrinks = new Set(["otra-01", "otra-02", "otra-14", "otra-15"]);
     return products.map((product) => {
       const id = normalize(product.id);
+      if (normalize(product.categoria) === "nuevo") return product;
       if (id.startsWith("cerveza-") || beersAndWines.has(id)) return { ...product, categoria: "Cervezas y vinos" };
       if (sodasAndLemonades.has(id)) return { ...product, categoria: "Sodas y limonadas" };
       if (id.startsWith("sin-alcohol-") || juicesWatersAndSoftDrinks.has(id)) return { ...product, categoria: "Jugos, aguas y gaseosas" };
@@ -151,7 +187,7 @@
     return {
       id: String(raw.id || "").trim(), categoria: String(raw.categoria || "Sin categoría").trim(),
       nombre: String(raw.nombre || "").trim(), descripcion: String(raw.descripcion || "").trim(),
-      precio: parsePrice(raw.precio), imagen: safeImageUrl(raw.imagen), disponible: parseBoolean(raw.disponible, true),
+      precio: parsePrice(raw.precio), imagen: safeImageUrl(raw.imagen || PRODUCT_IMAGES[String(raw.id || "").trim()]), disponible: parseBoolean(raw.disponible, true),
       etiqueta: String(raw.etiqueta || "").trim(), destacado: parseBoolean(raw.destacado, false),
       orden: Number.parseFloat(String(raw.orden || "9999").replace(",", ".")) || 9999,
       agotado_modo: normalize(raw.agotado_modo || "mostrar")
@@ -242,7 +278,7 @@
     const sold = !product.disponible;
     const label = sold ? "Agotado" : product.etiqueta;
     const image = product.imagen ? `<img src="${escapeHtml(product.imagen)}" alt="${escapeHtml(product.nombre)}" loading="lazy" decoding="async">` : "";
-    return `<article class="product-card${sold ? " is-sold-out" : ""}"><div class="product-card__media${image ? " has-image" : ""}" data-icon="${categoryIcon(product.categoria)}">${image}${label ? `<span class="badge${sold ? " badge--sold" : ""}">${escapeHtml(label)}</span>` : ""}</div><div class="product-card__body"><div class="product-card__top"><h3>${escapeHtml(product.nombre)}</h3><span class="product-card__price">${formatPrice(product.precio)}</span></div>${product.descripcion ? `<p class="product-card__description">${escapeHtml(product.descripcion)}</p>` : ""}</div></article>`;
+    return `<article class="product-card${sold ? " is-sold-out" : ""}"><div class="product-card__media${image ? " has-image" : ""}${product.imagen.includes("assets/img/bebidas/marca-") ? " product-card__media--packaged" : ""}" data-icon="${categoryIcon(product.categoria)}">${image}${label ? `<span class="badge${sold ? " badge--sold" : ""}">${escapeHtml(label)}</span>` : ""}</div><div class="product-card__body"><div class="product-card__top"><h3>${escapeHtml(product.nombre)}</h3><span class="product-card__price">${formatPrice(product.precio)}</span></div>${product.descripcion ? `<p class="product-card__description">${escapeHtml(product.descripcion)}</p>` : ""}</div></article>`;
   }
 
   function categoryIcon(category) {

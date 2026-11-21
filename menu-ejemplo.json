@@ -1,6 +1,7 @@
 {
   "aviso": "Productos y precios transcritos de los menús oficiales entregados el 20 de julio de 2026",
   "productos": [
+    {"id":"carne-r-bay","categoria":"Especialidades a la parrilla","nombre":"R-bay","descripcion":"Corte de res.","precio":42000,"imagen":"","disponible":"si","etiqueta":"","destacado":"no","orden":11.5,"agotado_modo":"mostrar"},
     {"id":"hamburguesa-new-york","categoria":"Nuevo","nombre":"Hamburguesa New York","descripcion":"Carne de búfalo, piña, queso Philadelphia y tocineta ahumada en pan brioche.","precio":30700,"imagen":"assets/img/hamburguesa-new-york-real.jpg","disponible":"si","etiqueta":"Lanzamiento","destacado":"no","orden":4,"agotado_modo":"mostrar"},
     {"id":"hamburguesa-la-fama","categoria":"Nuevo","nombre":"Hamburguesa Argentina","descripcion":"Carne de res de 180 g, chorizo La Fama, queso mozzarella, chimichurri y salsa de la casa.","precio":30700,"imagen":"assets/img/hamburguesa-la-fama.jpeg","disponible":"si","etiqueta":"Nuevo","destacado":"no","orden":2,"agotado_modo":"mostrar"},
     {"id":"especial-semana","categoria":"Especial de la semana","nombre":"Pollo en champiñones","descripcion":"Pollo a la parrilla con salsa de champiñones casera y papas en cascos. Incluye soda personal de tamarindo o frutos rojos.","precio":24900,"imagen":"assets/img/pollo-champinones-semana.jpg","disponible":"si","etiqueta":"Especial semanal","destacado":"si","orden":1,"agotado_modo":"mostrar"},
